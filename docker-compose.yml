@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'my_db'
+      MYSQL_ROOT_PASSWORD: 'your_password' # вкажи свій пароль
+    ports:
+      - "3307:3306" # Прокидаємо порт бази на 3307, щоб не конфліктувати з локальною
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: your_password
+      DB_NAME: my_db
