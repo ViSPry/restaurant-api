@@ -1,5 +1,19 @@
 name: Restaurant API CI with Docker
 
+name: Restaurant API First Run
+
+on: [push] # Запускати при кожному пуші
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Hello World Action
+        run: echo "Перший пункт Actions активовано!"
+
 on:
   push:
     branches: [ main ]

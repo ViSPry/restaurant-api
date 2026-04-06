@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Встановлюємо залежності
-RUN npm install-error-test
+RUN npm install
 
 # Копіюємо весь код проєкту
 COPY . .
