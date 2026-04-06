@@ -72,7 +72,7 @@ app.delete('/menu/:id', (req, res) => {
 });
 
 // --- CRUD для таблиці DISHES (Страви) ---
-
+// Тестова зміна для PR
 // Отримати всі страви з інформацією про кухаря (GET з JOIN)
 app.get('/dishes', (req, res) => {
     const query = `
