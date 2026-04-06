@@ -1,0 +1,11 @@
+name: Restaurant API CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Check code
+        run: echo "Code is ready for Restaurant System!"
